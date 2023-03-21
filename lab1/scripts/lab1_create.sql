@@ -47,3 +47,9 @@ CREATE TABLE fact_to_creature (
     FOREIGN KEY (fact_id) REFERENCES fact(id),
     FOREIGN KEY (creature_id) REFERENCES creature(id)
 );
+
+SELECT * FROM person WHERE id IN (
+    SELECT person_id FROM group_to_person WHERE group_id IN (
+        SELECT id as group_id FROM research_group WHERE id NOT IN (
+            SELECT group_id FROM fact
+                                       )));
