@@ -7,6 +7,6 @@ SELECT COUNT("Н_ЛЮДИ"."ИД") > 0 as IS_THERE_STUDENTS_YOUNGER_THAN_20 FROM
 
 
 /**
-  There is no point to use CURRENT_DATE, because all selected students are older than 20 y.o. at the current moment
+  There is no point to use CURRENT_DATE, because all selected students are older than 20 y.o. at this very moment
   In that case I have decided to use "01-01-2011" instead of using CURRENT_DATE
  */
