@@ -1,4 +1,4 @@
-SELECT count("Н_ЛЮДИ"."ИД") FROM "Н_ЛЮДИ"
+SELECT COUNT("Н_ЛЮДИ"."ИД") > 0 as IS_THERE_STUDENTS_YOUNGER_THAN_20 FROM "Н_ЛЮДИ"
          WHERE
             "Н_ЛЮДИ"."ИД" IN (SELECT "Н_УЧЕНИКИ"."ЧЛВК_ИД" FROM "Н_УЧЕНИКИ"
                                          WHERE "Н_УЧЕНИКИ"."ГРУППА"='3102')
